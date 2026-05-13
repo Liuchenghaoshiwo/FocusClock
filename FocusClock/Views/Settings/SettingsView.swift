@@ -12,7 +12,7 @@ struct SettingsView: View {
     private var records: [FocusRecord]
 
     @State private var notificationStatusText = "未检查"
-    @State private var exportResult: FocusExportResult?
+    @State private var exportShareItem: FocusExportResult?
     @State private var exportErrorMessage: String?
 
     private let reminderMinuteOptions = [5, 10, 15, 25, 45, 60]
@@ -30,12 +30,9 @@ struct SettingsView: View {
             .onAppear {
                 refreshNotificationStatus()
             }
-            .alert(item: $exportResult) { result in
-                Alert(
-                    title: Text("导出完成"),
-                    message: Text("已导出 \(result.recordCount) 条记录到：\n\(result.fileURL.lastPathComponent)"),
-                    dismissButton: .default(Text("知道了"))
-                )
+            .sheet(item: $exportShareItem) { result in
+                ShareSheet(items: [result.fileURL])
+                    .presentationDetents([.medium, .large])
             }
             .alert("导出失败", isPresented: Binding(
                 get: { exportErrorMessage != nil },
@@ -104,7 +101,7 @@ struct SettingsView: View {
         } header: {
             Text("数据")
         } footer: {
-            Text("当前先导出 JSON 到本机 Documents 目录，后续可在此基础上增加 CSV、分享面板或云端备份。")
+            Text("导出后会打开系统分享面板，可保存到「文件」、AirDrop、邮件或其他 App。")
         }
     }
 
@@ -140,7 +137,7 @@ struct SettingsView: View {
 
     private func exportRecordsAsJSON() {
         do {
-            exportResult = try FocusDataExporter.exportJSON(records: records)
+            exportShareItem = try FocusDataExporter.exportJSON(records: records)
         } catch {
             exportErrorMessage = error.localizedDescription
         }

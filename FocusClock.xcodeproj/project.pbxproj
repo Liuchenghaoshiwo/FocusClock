@@ -26,6 +26,7 @@
 		8D3E1C4B2B6B4A1A00100001 /* FutureExtensionPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1C4A2B6B4A1A00100001 /* FutureExtensionPoints.swift */; };
 		8D3E1C4D2B6B4A1A00100001 /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1C4C2B6B4A1A00100001 /* SectionCard.swift */; };
 		8D3E1C512B6B4A1A00100001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E1C502B6B4A1A00100001 /* Assets.xcassets */; };
+		8D3E1C532B6B4A1A00100001 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E1C522B6B4A1A00100001 /* ShareSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		8D3E1C4A2B6B4A1A00100001 /* FutureExtensionPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensionPoints.swift; sourceTree = "<group>"; };
 		8D3E1C4C2B6B4A1A00100001 /* SectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCard.swift; sourceTree = "<group>"; };
 		8D3E1C502B6B4A1A00100001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D3E1C522B6B4A1A00100001 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				8D3E1C4C2B6B4A1A00100001 /* SectionCard.swift */,
+				8D3E1C522B6B4A1A00100001 /* ShareSheet.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				8D3E1C4B2B6B4A1A00100001 /* FutureExtensionPoints.swift in Sources */,
 				8D3E1C1B2B6B4A1A00100001 /* MainTabView.swift in Sources */,
 				8D3E1C4D2B6B4A1A00100001 /* SectionCard.swift in Sources */,
+				8D3E1C532B6B4A1A00100001 /* ShareSheet.swift in Sources */,
 				8D3E1C1D2B6B4A1A00100001 /* HomeView.swift in Sources */,
 				8D3E1C372B6B4A1A00100001 /* FocusTaskTemplate.swift in Sources */,
 				8D3E1C1F2B6B4A1A00100001 /* RecordsView.swift in Sources */,
